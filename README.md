@@ -1,2 +1,2 @@
 # diegobarcelar.github.io
-My personal website (under construction).
+My website (under construction).
