@@ -1,0 +1,1108 @@
+/* ===================================================================
+ *  01. webfonts and iconfonts
+ *  02. base style overrides
+ *  03. typography & general theme styles
+ *  04. forms
+ *  05. buttons
+ *  06. other components
+ *  07. common and reusable styles
+ *  08. header styles
+ *  09. home
+
+ *
+ * =================================================================== */
+
+
+/* ===================================================================
+ *  01. webfonts and iconfonts - (_document-setup)
+ *
+ * ------------------------------------------------------------------- */
+/* Helvetica-Neue */
+@font-face {
+    font-family: 'HelveticaNeue-Italic';
+    src: url('../fonts/HelveticaNeue-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Regular';
+    src: url('../fonts/HelveticaNeue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-BoldItalic';
+    src: url('../fonts/HelveticaNeue-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('../fonts/HelveticaNeue-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ===================================================================
+ *  02. base style overrides - (_document-setup)
+ *
+ * ------------------------------------------------------------------- */
+html {
+	font-size: 10px;
+}
+@media only screen and (max-width:1024px) {
+	html {
+		font-size: 9.375px;
+	}
+}
+@media only screen and (max-width:768px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media only screen and (max-width:400px) {
+	html {
+		font-size: 9.375px;
+	}
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #050505;
+	font-family: "HelveticaNeue-Regular", sans-serif;
+	font-size: 1.6rem;
+	line-height: 3rem;
+	color: #353535;
+	margin: 0;
+	padding: 0;
+}
+
+/* -------------------------------------------------------------------
+ * links - (_document-setup)
+ * ------------------------------------------------------------------- */
+a,
+a:visited {
+	color: #6E6E6E;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+a:hover,
+a:focus {
+	color: #fff;
+}
+
+/* ===================================================================
+ *  03. typography & general theme styles - (_document-setup.scss)
+ *
+ * ------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
+  font-family: "HelveticaNeue-Bold", sans-serif;
+	color: #6E6E6E;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin-bottom: 2.1rem;
+}
+
+h3, .h03, h4, .h04 {
+	margin-bottom: 1.8rem;
+}
+
+h5, .h05, h6, .h06 {
+	margin-bottom: 1.2rem;
+}
+
+h1, .h01 {
+	font-size: 3.1rem;
+	line-height: 1.35;
+	letter-spacing: -.1rem;
+}
+
+
+@media only screen and (max-width:600px) {
+	h1, .h01 {
+		font-size: 2.6rem;
+		letter-spacing: -.07rem;
+	}
+}
+
+h2, .h02 {
+	font-size: 2.4rem;
+	line-height: 1.25;
+}
+h3, .h03 {
+	font-size: 2rem;
+	line-height: 1.5;
+}
+h4, .h04 {
+	font-size: 3rem;
+	line-height: 1.2;
+}
+h5, .h05 {
+	font-size: 1.8rem;
+	line-height: 1.7;
+	/* letter-spacing: .2rem; */
+}
+h6, .h06 {
+	font-size: 1.3rem;
+	line-height: 1.85;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+}
+
+p img {
+	margin: 0;
+}
+
+p.lead {
+	font-family: "HelveticaNeue-Bold", sans-serif;
+	font-size: 2rem;
+	line-height: 1.8;
+	color: #fff;
+	margin-bottom: 3.6rem;
+}
+
+@media only screen and (max-width:768px) {
+	p.lead {
+		font-size: 1.8rem;
+	}
+
+}
+table strong{
+	color: #fff;
+}
+
+em, i, strong, b {
+	font-size: 1.6rem;
+	line-height: 3rem;
+	font-style: normal;
+	font-weight: normal;
+}
+em, i {
+	font-family: "HelveticaNeue-Italic", serif;
+}
+strong, b {
+	font-family: "HelveticaNeue-Bold", serif;
+}
+
+small {
+	font-size: 1.1rem;
+	line-height: inherit;
+}
+
+blockquote {
+	margin: 3rem 0;
+	padding-left: 5rem;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 10rem;
+	line-height: 0px;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.3);
+	font-family: arial, sans-serif;
+	position: absolute;
+	top: 3.6rem;
+	left: 0;
+}
+
+blockquote p {
+	font-family: "HelveticaNeue-Regular", georgia, serif;
+	font-style: italic;
+	padding: 0;
+	font-size: 1.9rem;
+	line-height: 1.895;
+}
+
+blockquote cite {
+	display: block;
+	font-size: 1.3rem;
+	font-style: normal;
+	line-height: 1.615;
+}
+
+blockquote cite:before {
+	content: "\2014 \0020";
+}
+
+blockquote cite a,
+blockquote cite a:visited {
+	color: #4f4f4f;
+	border: none;
+}
+
+abbr {
+	font-family: "HelveticaNeue-Bold", serif;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: .05rem;
+	color: #4f4f4f;
+}
+
+var, kbd, samp, code, pre {
+	font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+}
+
+pre {
+	padding: 2.4rem 3rem 3rem;
+	background: #F1F1F1;
+}
+
+code {
+	font-size: 1.4rem;
+	margin: 0 .2rem;
+	padding: .3rem .6rem;
+	white-space: nowrap;
+	background: #F1F1F1;
+	border: 1px solid #E1E1E1;
+	border-radius: 3px;
+}
+
+pre > code {
+	display: block;
+	white-space: pre;
+	line-height: 2;
+	padding: 0;
+	margin: 0;
+}
+
+pre.prettyprint > code {
+	border: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+mark {
+	background: #FFF49B;
+	color: #000;
+}
+
+hr {
+	border: solid #d2d2d2;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 2.4rem 0 1.5rem;
+	height: 0;
+}
+
+/* -------------------------------------------------------------------
+ * Lists - (_document-setup.scss)
+ * ------------------------------------------------------------------- */
+ol {
+	list-style: decimal;
+}
+ul {
+	list-style: disc;
+}
+li {
+	display: list-item;
+}
+ol, ul {
+	margin-left: 1.7rem;
+}
+ul li {
+	/* padding-left: .4rem; */
+}
+ul ul, ul ol, ol ol, ol ul {
+	margin: .6rem 0 .6rem 1.7rem;
+}
+
+ul.disc li {
+	display: list-item;
+	list-style: none;
+	padding: 0 0 0 .8rem;
+	position: relative;
+}
+
+ul.disc li::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #6748d9;
+	position: absolute;
+	left: -17px;
+	top: 11px;
+	vertical-align: middle;
+}
+
+dt {
+	margin: 0;
+	color: #6748d9;
+}
+
+dd {
+	margin: 0 0 0 2rem;
+}
+
+/* -------------------------------------------------------------------
+ * Spacing - (_document-setup)
+ * ------------------------------------------------------------------- */
+button,
+.button {
+	margin-bottom: 1.2;
+}
+
+fieldset {
+	margin-bottom: 1.5rem;
+}
+
+input,
+textarea,
+select,
+pre,
+blockquote,
+figure,
+table,
+p,
+ul,
+ol,
+dl,
+form,
+.fluid-video-wrapper,
+.ss-custom-select {
+	margin-bottom: 0rem;
+}
+
+/* -------------------------------------------------------------------
+ * floated image - (_document-setup)
+ * ------------------------------------------------------------------- */
+img.pull-right {
+	margin: 1.5rem 0 0 3rem;
+}
+
+img.pull-left {
+	margin: 1.5rem 3rem 0 0;
+}
+
+/* -------------------------------------------------------------------
+ * block grids paddings
+ * ------------------------------------------------------------------- */
+.bgrid {
+	padding: 0 20px;
+}
+
+@media only screen and (max-width:1024px) {
+	.bgrid {
+		padding: 0 18px;
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.bgrid {
+		padding: 0 15px;
+	}
+}
+
+@media only screen and (max-width:600px) {
+	.bgrid {
+		padding: 0 10px;
+	}
+}
+
+@media only screen and (max-width:400px) {
+	.bgrid {
+		padding: 0;
+	}
+}
+
+/* -------------------------------------------------------------------
+ * tables - (_document-setup.scss)
+ * ------------------------------------------------------------------- */
+table {
+	border-width: 0;
+	width: 100%;
+	max-width: 100%;
+	font-family: "HelveticaNeue-Regular", sans-serif;
+	color:#6E6E6E;
+}
+
+th, td {
+	padding: 1.5rem 3rem;
+	text-align: left;
+	border-bottom: 0px;
+}
+th {
+	color: #151515;
+	font-family: "HelveticaNeue-Bold", sans-serif;
+}
+td {
+	line-height: 1.5;
+}
+th:first-child, td:first-child {
+	padding-left: 0;
+}
+th:last-child, td:last-child {
+	padding-right: 0;
+}
+
+.table-responsive {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* -------------------------------------------------------------------
+ * pace.js styles - minimal  - (_document-setup.scss)
+ * ------------------------------------------------------------------- */
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pace-inactive {
+	display: none;
+}
+
+.pace .pace-progress {
+	background: #6748d9;
+	position: fixed;
+	z-index: 900;
+	top: 0;
+	right: 100%;
+	width: 100%;
+	height: 6px;
+}
+
+
+/* ===================================================================
+ *  04. preloader - (_preloader-1.scss)
+ *
+ * ------------------------------------------------------------------- */
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #050505;
+	z-index: 800;
+	height: 100%;
+	width: 100%;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+	display: none;
+}
+
+
+
+/* ===================================================================
+ *  07. common and reusable styles
+ *
+ * ------------------------------------------------------------------- */
+.section-intro {
+	text-align: center;
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+
+.section-intro h1 {
+	font-family: "HelveticaNeue-Bold", serif;
+	font-size: 4.8rem;
+	line-height: 1.375;
+	color: #ffffff;
+}
+
+.section-intro h3 {
+	font-family: "HelveticaNeue-Bold", sans-serif;
+	font-size: 2rem;
+	color: #6748d9;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	margin-bottom: 0;
+}
+
+.section-intro.with-bottom-sep {
+	padding-bottom: 4.2rem;
+	position: relative;
+}
+
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * section-intro
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width:768px) {
+	.section-intro h1 {
+		font-size: 4.2rem;
+	}
+
+	.section-intro h3 {
+		font-size: 1.8rem;
+	}
+
+}
+
+@media only screen and (max-width:600px) {
+	.section-intro h1 {
+		font-size: 3.6rem;
+	}
+
+	.section-intro h3 {
+		font-size: 1.7rem;
+	}
+
+}
+
+@media only screen and (max-width:400px) {
+	.section-intro h1 {
+		font-size: 3.3rem;
+	}
+
+	.section-intro h3 {
+		font-size: 1.6rem;
+	}
+
+}
+
+.wide {
+	max-width: 1300px;
+}
+
+.narrow {
+	max-width: 800px;
+}
+
+.js .animate-this,
+.js .animate-intro {
+	opacity: 0;
+}
+
+.animate-intro #spNU{
+	color:rgba(103, 72, 217, 1)
+}
+.oldie .animate-this,
+.oldie .animate-intro
+.no-cssanimations .animate-this,
+.no-cssanimations .animate-intro {
+	opacity: 1;
+}
+
+
+/* ===================================================================
+ *  08. header styles - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+header {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 700;
+}
+
+header .row {
+	height: auto;
+	max-width: 1300px;
+	position: relative;
+}
+
+/* -------------------------------------------------------------------
+ * header logo - (_layout.css)
+ * ------------------------------------------------------------------- */
+header .header-logo {
+	position: absolute;
+	left: 26px;
+	top: 30px;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+header .header-logo a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: none;
+	width: 60px;
+	height: 60px;
+	text-shadow: none;
+	color: #fff;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * header section
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width:768px) {
+	header .header-logo {
+		top: 27px;
+	}
+
+	header .header-logo a {
+		width: 54px;
+		height: 54px;
+		background-size: 54px 54px;
+	}
+
+}
+
+@media only screen and (max-width:400px) {
+	#header-menu-trigger .header-menu-text {
+		display: none;
+	}
+
+}
+
+/* ===================================================================
+ *  09. home - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+#home {
+
+	background: #151515;
+	width: 100%;
+	height: 100%;
+	background: #000
+	min-height: 804px;
+	position: relative;
+    -webkit-transition:background-position .7s ease-in;
+    -moz-transition:background-position .7s ease-in;
+    -o-transition:background-position .7s ease-in;
+    transition:background-position .7s ease-in;
+}
+
+#home .gradient-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .2;
+	background: -moz-linear-gradient(left, black 0%, black 20%, transparent 100%);  /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, black 0%, black 20%, transparent 100%);  /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, black 0%, black 20%, transparent 100%);  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);  /* IE6-9 */
+}
+
+#home .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+	background-color: #000000;
+}
+
+.home-content-table {
+	width: 100%;
+	height: 100%;
+	display: table;
+	position: relative;
+}
+
+.home-content-tablecell {
+	display: table-cell;
+	vertical-align: bottom;
+	z-index: 500;
+}
+
+.home-content-tablecell .row {
+	position: relative;
+	padding-top: 4.2rem;
+	padding-bottom: 3rem;
+}
+
+.home-content-tablecell .intro-superior{
+  position: relative;
+  padding-top: 12rem;
+  padding-bottom: 3rem;
+}
+
+.home-content-tablecell h3 {
+	font-family: "HelveticaNeue-Bold", sans-serif;
+	font-size: 2.2rem;
+	color:#6E6E6E;
+	letter-spacing: .15rem;
+	margin: 0 0 0 .3rem;
+}
+
+.home-content-tablecell h1 {
+	font-family: "HelveticaNeue-Bold", sans-serif;
+	font-size: 5.2rem;
+	line-height: 1.5;
+	color:#6E6E6E;
+}
+
+span.white-text-intro{
+  display: block;
+	color: #fff;
+}
+span.white-text{
+	color: #fff;
+}
+
+.home-content-tablecell .home-section-links {
+	display: inline-block;
+	list-style: none;
+	margin: 4rem 0 2rem 0;
+}
+
+.home-content-tablecell .home-section-links li {
+	display: inline-block;
+	font-family: "HelveticaNeue-Bold", sans-serif;
+	font-size: 1.6rem;
+	/* letter-spacing: .1rem; */
+	color: #6E6E6E;
+	/* margin-right: 1.5rem; */
+	margin-bottom: .6rem;
+}
+
+.home-content-tablecell .home-section-links li:last-child {
+	margin-right: 0;
+}
+
+.home-content-tablecell .home-section-links a {
+	font-family: "HelveticaNeue-Bold";
+	font-size: 1.6rem;
+	text-transform: none;
+	letter-spacing: 0;
+	/* margin-left: .3rem; */
+	color: #fff;
+  display: inline-block;
+  position: relative;
+}
+
+/*underline-effect-hover*/
+a.underline-effect:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.underline-effect:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.scroll-icon {
+	position: absolute;
+	width: 60px;
+	height: 48px;
+	font-size: 3.3rem;
+	bottom: 30px;
+	right: 20px;
+	color: #FFFFFF !important;
+	-webkit-animation: vertical 3s ease infinite;
+	animation: vertical 3s ease infinite;
+}
+
+/* vertical animation */
+@-webkit-keyframes vertical {
+	0%,
+	60%,
+	80%,
+	100% {
+		-webkit-transform: translateY(0);
+	}
+
+	20% {
+		-webkit-transform: translateY(-5px);
+	}
+
+	40% {
+		-webkit-transform: translateY(20px);
+	}
+
+}
+
+@keyframes vertical {
+	0%,
+	60%,
+	80%,
+	100% {
+		-webkit-transform: translateY(0);
+	}
+
+	20% {
+		-webkit-transform: translateY(-5px);
+	}
+
+	40% {
+		-webkit-transform: translateY(20px);
+	}
+
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * home section
+ * ------------------------------------------------------------------- */
+
+
+
+th, td {
+    padding: 1.5rem 0rem;
+    text-align: left;
+    border-bottom: 0px;
+    vertical-align: text-top;
+}
+
+	#home {
+		background-position: 60% 0;
+	}
+	.home-content-tablecell h2 {
+		font-size: 2.6rem;
+		margin-bottom: 0rem;
+	}
+
+@media only screen and (max-width:1200px) {
+  .home-content-tablecell h1 {
+      font-family: "HelveticaNeue-Bold", serif;
+      font-size: 4.5rem;
+      line-height: 1.5;
+      color: #6E6E6E;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+	#home {
+		background-position: 60% 0;
+	}
+	.home-content-tablecell h3 {
+		font-size: 2rem;
+	}
+
+	.home-content-tablecell h1 {
+		font-size: 4rem;
+	}
+
+}
+
+
+@media only screen and (max-width:768px) {
+	#home {
+		min-height: 702px;
+		background-position: 60% 0;
+	}
+  .home-content-tablecell .row {
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+  }
+
+	.home-content-tablecell .home-bottom-text {
+		padding-right: 0;
+	}
+
+	.home-content-tablecell h1 {
+		font-size: 3.6rem;
+	}
+
+  .home-content-tablecell h3 {
+		font-size: 1.8rem;
+	}
+
+  .home-content-tablecell h4 {
+      font-size: 2.5rem;
+}
+	.home-content-tablecell h1 br {
+		display: none;
+	}
+
+	.home-content-tablecell .home-section-links {
+		margin: 2.5rem 0 2.5em 0;
+	}
+
+	.home-content-tablecell .home-section-links li {
+		font-size: 1.4rem;
+	}
+
+	.home-content-tablecell .home-section-links a {
+		font-size: 1.4rem;
+	}
+
+	.scroll-icon {
+		right: 15px;
+	}
+
+}
+
+@media only screen and (max-width:600px) {
+	#home {
+		min-height: 702px;
+		background-position: 62% 0;
+	}
+
+	.home-content-tablecell {
+		vertical-align: bottom;
+	}
+
+	.home-content-tablecell .row {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+	}
+
+	.home-content-tablecell .home-bottom-text {
+		padding-right: 0;
+	}
+
+
+	.home-content-tablecell h1 {
+		font-size: 3.3rem;
+	}
+
+  .home-content-tablecell h3 {
+    font-size: 1.7rem;
+  }
+
+  .home-content-tablecell h4 {
+    font-size: 2.5rem;
+  }
+
+  .home-content-tablecell .home-section-links li, .home-content-tablecell .home-section-links a {
+    font-size: 1.8rem;
+    line-height: 3em;
+  }
+
+	.scroll-icon {
+		right: 10px;
+	}
+
+  strong{
+    line-height: 0rem;
+}
+  th, td {
+      padding: 1.5rem 1rem;
+      text-align: left;
+      border-bottom: 0px;
+      vertical-align: top;
+  }
+
+}
+@media only screen and (max-device-width:600px) and (orientation:landscape) {
+  .home-content-tablecell .home-section-links li, .home-content-tablecell .home-section-links li a{
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-device-width:500px) and (orientation:landscape) {
+  .home-content-tablecell .home-section-links li, .home-content-tablecell .home-section-links li a{
+    font-size: 1.8rem;
+  }
+}
+
+
+@media only screen and (max-width:500px) {
+	.home-content-tablecell .home-bottom-text {
+		padding-right: 0;
+	}
+
+	.home-content-tablecell h3 {
+		font-size: 1.7rem;
+	}
+  .home-content-tablecell h2{
+    font-size: 2rem;
+  }
+	.home-content-tablecell h1 {
+		font-size: 2.4rem;
+    margin-bottom: 0rem;
+	}
+  .home-content-tablecell h4 {
+    font-size: 2.3rem;
+  }
+
+  .home-content-tablecell h5{
+    font-family: 'HelveticaNeue-Regular';
+    /* font-size: 1.8rem; */
+  }
+
+  .home-content-tablecell h5.experience{
+    font-family: 'HelveticaNeue-Bold';
+    /* font-size: 1.8rem; */
+  }
+
+  .home-content-tablecell .home-section-links {
+    margin: 2.5rem 0 2.5em 0;
+  }
+}
+
+@media only screen and (max-width:400px) {
+	#home {
+		min-height: 654px;
+		background-position: 60% 0;
+	}
+
+	.home-content-tablecell .home-bottom-text {
+		padding-right: 0;
+	}
+
+	.home-content-tablecell h3 {
+		font-size: 1.4rem;
+	}
+
+	.home-content-tablecell h1 {
+		font-size: 2.4rem;
+	}
+  .home-content-tablecell h4 {
+    font-size: 2rem;
+  }
+
+  .home-content-tablecell h5{
+    font-family: 'HelveticaNeue-Regular';
+    font-size: 1.8rem;
+  }
+
+  .home-content-tablecell h5.experience{
+    font-family: 'HelveticaNeue-Bold';
+    font-size: 1.8rem;
+  }
+
+	.home-content-tablecell .home-section-links {
+		margin: 1.5rem 0 2.5rem 0;
+	}
+  .home-content-tablecell .home-section-links li, .home-content-tablecell .home-section-links li a{
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+  }
+
+}

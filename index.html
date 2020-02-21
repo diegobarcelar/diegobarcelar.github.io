@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- metadados basicos da pagina -->
+    <meta charset="utf-8">
+    <title>Diego Barcelar | UX/UI Designer and Front-End Developer </title>
+    <meta name="og:title" content="Diego Barcelar">
+    <meta name="og:description" content="I'm Diego Barcelar, brazilian Product Designer & Developer">
+    <meta name="description" content="I'm Diego Barcelar, brazilian Product Designer & Developer">
+    <meta name="author" content="Diego Barcelar">
+
+    <!-- metadados especificos da versao mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS externos -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- scripts -->
+    <!-- <script type="text/javascript"
+        src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=q-vO5Eb9NP-KpMa4SW_9fT4mFv9AxePxqOoJEa4QQdB4FeSq4wfEL6Pe61L6sBP2"
+        charset="UTF-8"></script> -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons -->
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="img/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="img/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="img/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="img/favicon/mstile-310x310.png" />
+
+</head>
+
+<body id="top">
+    <!-- home -->
+    <section id="home">
+        <div class="overlay"></div>
+        <div class="gradient-overlay"></div>
+
+        <div class="home-content-table">
+            <div class="home-content-tablecell">
+                <div class="row">
+                    <div class="col-twelve">
+                        <div class="home-bottom-text">
+                            <h2 class="animate-intro welcome">Hello / Olá! <span id="myEmoji"></span></h2>
+                            <h1 class="animate-intro">
+                                My name is Diego Barcelar.
+                                <span class="white-text-intro">I'm a undergraduate student in Design at Federal
+                                    University of Pernambuco.</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-five">
+                        <div class="home-bottom-text">
+                            <h4 class="animate-intro">
+                                Interested in <span class="white-text">design</span>, <span
+                                    class="white-text">business</span>, <span class="white-text"></span>code</span> and
+                                everything that relates to any of these subjects.
+                            </h4>
+
+                            <h5 class="animate-intro">
+                                That means potentialy research, visual and code.
+                            </h5>
+
+                        </div>
+                    </div>
+
+                    <div class="col-two">
+                        <div class="home-bottom-text">
+                            </br> <!-- ???????????????????  -->
+                        </div>
+                    </div>
+
+                    <div class="col-five">
+                        <div class="home-bottom-text">
+                            <ul class="home-section-links">
+                                <li class="animate-intro">Feel free to <a href="mailto:diegosbarcelar@gmail.com"
+                                        class="underline-effect"> drop me a line</a> or check my <a
+                                        href="https://www.linkedin.com/in/diegobarcelar/" target="_blank"
+                                        class="underline-effect">LinkedIn</a> and <a
+                                        href="https://dribbble.com/diegobarcelar" target="_blank"
+                                        class="underline-effect">Dribbble</a>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+        $(window).on('load', function () {
+            // code here
+            setTimeout(function () {
+                $('html').css({
+                    overflow: 'auto',
+                });
+            }, 3000);
+        });
+
+        // random emoji hello message
+        $(document).ready(function () {
+            var quotes = new Array('✌️', '😊', '😀', '👋', '🤙'),
+                randno = quotes[Math.floor(Math.random() * quotes.length)];
+            $('#myEmoji').text(randno);
+        });
+
+        // random favicon
+        (function () {
+            var arrFavicon = ['link_favicon1', 'link_favicon2', 'link_favicon3']; //put your favicon links here
+
+            var link = document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = arrFavicon[Math.floor(Math.random() * arrFavicon.length)]; //don't need to change here no matter how many favicons you have
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }());
+    </script>
+
+    <!-- Google Analytics
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-xxxxxxxxx-x', 'auto');
+        ga('send', 'pageview');
+    </script>
+    -->
+
+</body>
+</html>
