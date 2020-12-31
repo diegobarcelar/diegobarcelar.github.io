@@ -1,2 +1,2 @@
 # diegobarcelar.github.io
-My website/portfolio in beta version.
+My personal website/portfolio in HTML/CSS.
